@@ -26,9 +26,9 @@ English | [中文](README.md)
 | OpenRouter | ✅ | GPT-4, Claude, Llama, etc. |
 | Google Gemini | ✅ | Gemini Pro, Gemini Pro Vision |
 | DeepSeek | ✅ | DeepSeek Chat, DeepSeek Coder |
-| Anthropic | ✅ | Claude 3.5 Sonnet, Claude 3 Opus |
-| Azure OpenAI | 🚧 | In Development |
-| Cohere | 🚧 | In Development |
+| Cohere | ✅ | command-r, command-r+, command-light|
+| Anthropic | 🚧| develop |
+| Azure OpenAI | 🚧 | develop |
 
 ## 🚀 Quick Start
 
