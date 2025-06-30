@@ -293,9 +293,6 @@ A: Log in to Cloudflare Dashboard, you can find your Account ID in the right sid
 ### Q: What models are supported?
 A: Check the supported models list via `/v1/models` endpoint.
 
-### Q: How to handle rate limiting?
-A: The system has built-in rate limiting functionality, you can configure limit parameters in `src/config/auth.ts`.
-
 ### Q: Can I customize model configurations?
 A: Yes, you can add or modify model configurations in `src/models/index.ts`.
 

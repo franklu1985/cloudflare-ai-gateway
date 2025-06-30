@@ -292,9 +292,6 @@ A: 登录 Cloudflare Dashboard，在右侧边栏可以找到您的账户 ID。
 ### Q: 支持哪些模型？
 A: 支持的模型列表请查看 `/v1/models` 端点或访问 [PROVIDERS.md](PROVIDERS.md)。
 
-### Q: 如何处理速率限制？
-A: 系统内置速率限制功能，可在 `src/config/auth.ts` 中配置限制参数。
-
 ### Q: 可以自定义模型配置吗？
 A: 可以在 `src/models/index.ts` 中添加或修改模型配置。
 
