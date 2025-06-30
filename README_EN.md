@@ -42,7 +42,7 @@ English | [中文](README.md)
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/galatea-ai-api.git
+   git clone https://github.com/franklu1985/cloudflare-ai-gateway.git
    cd galatea-ai-api
    ```
 
@@ -181,14 +181,14 @@ ANTHROPIC_API_KEY=sk-ant-your_anthropic_key
 Configure deployment settings in `wrangler.toml`:
 
 ```toml
-name = "galatea-ai"
+name = "cloudflare-ai-gateway"
 main = "src/index.ts"
 compatibility_date = "2024-03-20"
 
 [vars]
 ENVIRONMENT = "development"
 CLOUDFLARE_ACCOUNT_ID = "your_account_id"
-AI_GATEWAY_ID = "galatea-ai"
+AI_GATEWAY_ID = "your-ai-gateway"
 
 [[kv_namespaces]]
 binding = "CACHE"
@@ -291,7 +291,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 A: Log in to Cloudflare Dashboard, you can find your Account ID in the right sidebar.
 
 ### Q: What models are supported?
-A: Check the supported models list via `/v1/models` endpoint or visit [PROVIDERS.md](PROVIDERS.md).
+A: Check the supported models list via `/v1/models` endpoint.
 
 ### Q: How to handle rate limiting?
 A: The system has built-in rate limiting functionality, you can configure limit parameters in `src/config/auth.ts`.
@@ -303,6 +303,6 @@ A: Yes, you can add or modify model configurations in `src/models/index.ts`.
 
 If you encounter any issues or have questions, please:
 
-- Check [Issues](https://github.com/your-username/galatea-ai-api/issues)
+- Check [Issues](https://github.com/franklu1985/cloudflare-ai-gateway/issues)
 - Create a new Issue
 - Join our community discussions 

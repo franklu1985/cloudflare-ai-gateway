@@ -42,7 +42,7 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/your-username/galatea-ai-api.git
+   git clone https://github.com/franklu1985/cloudflare-ai-gateway.git
    cd galatea-ai-api
    ```
 2. **安装依赖**
@@ -169,10 +169,10 @@ AI_GATEWAY_ID=galatea-ai
 
 # AI 提供商 API 密钥
 WORKERS_AI_API_KEY=your_workers_ai_key
-OPENROUTER_API_KEY=sk-or-v1-your_openrouter_key
+OPENROUTER_API_KEY=your_openrouter_key
 GOOGLE_API_KEY=your_google_api_key
-DEEPSEEK_API_KEY=sk-your_deepseek_key
-ANTHROPIC_API_KEY=sk-ant-your_anthropic_key
+DEEPSEEK_API_KEY=your_deepseek_key
+ANTHROPIC_API_KEY=your_anthropic_key
 ```
 
 ### Wrangler 配置
@@ -302,6 +302,6 @@ A: 可以在 `src/models/index.ts` 中添加或修改模型配置。
 
 如果您遇到问题或有任何疑问，请：
 
-- 查看 [Issues](https://github.com/your-username/galatea-ai-api/issues)
+- 查看 [Issues](https://github.com/franklu1985/cloudflare-ai-gateway/issues)
 - 创建新的 Issue
 - 加入我们的社区讨论 
