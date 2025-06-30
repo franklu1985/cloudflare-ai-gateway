@@ -42,8 +42,8 @@ English | [中文](README.md)
 
 1. **Clone the repository**
    ```bash
-git clone https://github.com/your-username/galatea-ai-api.git
-cd galatea-ai-api
+   git clone https://github.com/your-username/galatea-ai-api.git
+   cd galatea-ai-api
    ```
 
 2. **Install dependencies**

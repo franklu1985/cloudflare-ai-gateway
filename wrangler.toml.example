@@ -1,0 +1,104 @@
+# ========================================
+# 基础配置
+# ========================================
+name = "galatea-ai"
+main = "src/index.ts"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+
+# 默认环境变量 (开发环境)
+[vars]
+ENVIRONMENT = "development"
+LOG_LEVEL = "debug"
+CLOUDFLARE_ACCOUNT_ID = "your-account-id-here"  # 替换为您的 Cloudflare 账户 ID
+AI_GATEWAY_ID = "your-ai-gateway-id"
+
+# 默认 AI 绑定
+[ai]
+binding = "AI"
+
+# ========================================
+# 开发环境 (本地调试)
+# ========================================
+[env.dev]
+name = "galatea-ai-dev"
+
+# 开发环境 AI 绑定
+[env.dev.ai]
+binding = "AI"
+
+# 开发环境 KV 存储 (本地测试用)
+[[env.dev.kv_namespaces]]
+binding = "CACHE"
+id = "your-dev-kv-namespace-id"  # 替换为您的开发环境 KV 命名空间 ID
+preview_id = "your-dev-kv-namespace-id"
+
+# 开发环境变量
+[env.dev.vars]
+ENVIRONMENT = "development"
+LOG_LEVEL = "debug"
+CLOUDFLARE_ACCOUNT_ID = "your-account-id-here"
+AI_GATEWAY_ID = "your-ai-gateway-id"
+
+# ========================================
+# 预览环境 (测试部署)
+# ========================================
+[env.preview]
+name = "galatea-ai-preview"
+
+# 预览环境 AI 绑定
+[env.preview.ai]
+binding = "AI"
+
+# 预览环境 KV 存储
+[[env.preview.kv_namespaces]]
+binding = "CACHE"
+id = "your-preview-kv-namespace-id"  # 替换为您的预览环境 KV 命名空间 ID
+
+# 预览环境变量
+[env.preview.vars]
+ENVIRONMENT = "preview"
+LOG_LEVEL = "info"
+CLOUDFLARE_ACCOUNT_ID = "your-account-id-here"
+AI_GATEWAY_ID = "your-ai-gateway-id"
+
+# ========================================
+# 生产环境 (正式部署)
+# ========================================
+[env.production]
+name = "galatea-ai-production"
+
+# 生产环境 AI 绑定
+[env.production.ai]
+binding = "AI"
+
+# 生产环境 KV 存储
+[[env.production.kv_namespaces]]
+binding = "CACHE"
+id = "your-production-kv-namespace-id"  # 替换为您的生产环境 KV 命名空间 ID
+
+# 生产环境变量
+[env.production.vars]
+ENVIRONMENT = "production"
+LOG_LEVEL = "warn"  # 生产环境使用更严格的日志级别
+CLOUDFLARE_ACCOUNT_ID = "your-account-id-here"
+AI_GATEWAY_ID = "your-ai-gateway-id"
+
+# ========================================
+# 环境变量配置说明
+# ========================================
+# 以下环境变量需要通过 wrangler secret 命令为每个环境单独设置：
+#
+# 必需的密钥配置:
+# - WORKERS_AI_API_KEY: Cloudflare Workers AI API Key
+#
+# 可选的 AI Provider 配置:
+# - OPENROUTER_API_KEY: OpenRouter API Key
+# - GOOGLE_API_KEY: Google Gemini API Key
+#
+# 设置示例:
+# wrangler secret put WORKERS_AI_API_KEY --env dev
+# wrangler secret put WORKERS_AI_API_KEY --env preview
+# wrangler secret put WORKERS_AI_API_KEY --env production
+#
+# 注意: 每个环境需要单独配置密钥，确保环境隔离 

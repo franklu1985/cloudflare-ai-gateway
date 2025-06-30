@@ -1,0 +1,61 @@
+{
+  "name": "galatea-ai-api",
+  "version": "1.0.0",
+  "description": "A unified AI model gateway built on Cloudflare Workers, providing OpenAI-compatible API interfaces with support for multiple AI providers.",
+  "main": "src/index.ts",
+  "homepage": "https://github.com/your-username/galatea-ai-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/galatea-ai-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/galatea-ai-api/issues"
+  },
+  "scripts": {
+    "dev": "wrangler dev --env dev",
+    "preview": "wrangler dev --env preview",
+    "build": "wrangler deploy --dry-run --env preview",
+    "deploy": "wrangler deploy --env production",
+    "deploy:dev": "wrangler deploy --env dev",
+    "deploy:preview": "wrangler deploy --env preview",
+    "test": "echo \"No tests available\""
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "openai",
+    "ai",
+    "gateway",
+    "typescript",
+    "api",
+    "proxy",
+    "llm",
+    "chat",
+    "artificial-intelligence",
+    "edge-computing"
+  ],
+  "author": "Galatea AI Gateway Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/**/*",
+    "*.example",
+    "README*.md",
+    "LICENSE",
+    "CONTRIBUTING.md"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "@types/node": "^22.9.0",
+    "dotenv": "^17.0.0",
+    "eslint": "^9.15.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.21.2"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.6",
+    "node-fetch": "^3.3.2"
+  }
+}

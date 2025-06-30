@@ -42,10 +42,9 @@
 
 1. **克隆仓库**
    ```bash
-git clone https://github.com/your-username/galatea-ai-api.git
-cd galatea-ai-api
+   git clone https://github.com/your-username/galatea-ai-api.git
+   cd galatea-ai-api
    ```
-
 2. **安装依赖**
    ```bash
    npm install
